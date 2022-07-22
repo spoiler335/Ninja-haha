@@ -20,9 +20,14 @@ public class CameraController
 
 	public void LateUpdate()
 	{
-		cameraTrans.position.x = character.transform.position.x;
-		cameraTrans.position.y = character.transform.position.y + FOLLOW_DIST_UP;
-		cameraTrans.position.z = character.transform.position.z + FOLLOW_DIST_BACK;
+		// cameraTrans.position.x = character.transform.position.x;
+		// cameraTrans.position.y = character.transform.position.y + FOLLOW_DIST_UP;
+		// cameraTrans.position.z = character.transform.position.z + FOLLOW_DIST_BACK;
+
+		Vector3 newPos = new Vector3(character.transform.position.x, character.transform.position.y + FOLLOW_DIST_UP, character.transform.position.z + FOLLOW_DIST_BACK);
+
+		cameraTrans.position = newPos;
+
 		cameraTrans.LookAt(character.transform);
 	}
 }
