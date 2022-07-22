@@ -7,18 +7,19 @@ using UnityEngine;
 
 public class StarController : MonoBehaviour
 {
-	private int stars;
+	private int stars = 0;
 
 	public void PickupStar()
 	{
-		stars++;
+		++stars;
 	}
 
 	public int Star
 	{
 		get
 		{
-			return stars;
+			return stars/2;
 		}
+
 	}
 }

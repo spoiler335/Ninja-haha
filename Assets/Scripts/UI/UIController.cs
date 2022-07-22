@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController
+public class UIController 
 {
 	private CharacterController characterController;
 	private StarController starController;
