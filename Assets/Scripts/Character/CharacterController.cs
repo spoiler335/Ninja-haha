@@ -7,7 +7,7 @@ public class CharacterController : MonoBehaviour
 {
 	private CharacterMovement characterMovement;
 	private NavMeshAgent navAgent;
-	private int maxHealth = 50;
+	private int maxHealth = 100;
 	private int health;
 
     void Start()

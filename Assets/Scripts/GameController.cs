@@ -11,14 +11,7 @@ public class GameController : MonoBehaviour
 	private CollectableController collectableController;
 	private UIController UIController;
 
-	private void Awake()
-	{
-		if (hardMode)
-		{
-			int startHealth = characterController.MaxHealth / 2;
-			characterController.SetHealth(startHealth);
-		}
-	}
+	
 
 	void Start()
     {
@@ -26,6 +19,13 @@ public class GameController : MonoBehaviour
 		collectableController = new CollectableController(transform.Find("Collectables"), characterController);
 		StarController starController = GetComponent<StarController>();
 		UIController = new UIController(transform.Find("UI"), characterController, starController);
+
+		if (hardMode)
+		{
+			int startHealth = characterController.MaxHealth / 2;
+			Debug.Log(startHealth);
+			characterController.SetHealth(startHealth);
+		}
 	}
 
 	private void Update()
