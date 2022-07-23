@@ -10,27 +10,35 @@ using UnityEngine.UI;
 public class UIController 
 {
 	private CharacterController characterController;
-	private StarController starController;
+	
+
+	private Pickups pickups;
 
 	private Image healthSlider;
 	private TextMeshProUGUI healthText;
 	private TextMeshProUGUI starText;
+	private Button inventoryButton;
+	private GameObject inventoryPanel;
 
-	public UIController(Transform UIRoot, CharacterController characterController,
-		StarController starController)
+	public UIController(Transform UIRoot, CharacterController characterController, Pickups pickups)
 	{
 		this.characterController = characterController;
-		this.starController = starController;
+		this.pickups=pickups;
 
 		healthSlider = UIRoot.Find("HealthBar/BarFill").GetComponent<Image>();
 		healthText = UIRoot.Find("HealthBar/Text").GetComponent<TextMeshProUGUI>();
 		starText = UIRoot.Find("ScoreCount/Background/Text").GetComponent<TextMeshProUGUI>();
+		inventoryButton = UIRoot.Find("InventoryButton").GetComponent<Button>();
+		inventoryPanel = UIRoot.Find("InventoryPanel").GetComponent<GameObject>();
 	}
 
 	public void Update()
 	{
 		healthSlider.fillAmount = (float)characterController.Health / characterController.MaxHealth;
 		healthText.text = characterController.Health + "/" + characterController.MaxHealth;
-		starText.text = starController.Star.ToString();
+		starText.text = pickups.Star.ToString();
+
 	}
+
+	
 }

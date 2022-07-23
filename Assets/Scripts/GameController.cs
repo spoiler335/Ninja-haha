@@ -5,10 +5,10 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
 	public CharacterController characterController;
+	public Pickups pickups;
 	public bool hardMode;
 
 	private CameraController cameraController;
-	private CollectableController collectableController;
 	private UIController UIController;
 
 	
@@ -16,9 +16,7 @@ public class GameController : MonoBehaviour
 	void Start()
     {
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
-		collectableController = new CollectableController(transform.Find("Collectables"), characterController);
-		StarController starController = GetComponent<StarController>();
-		UIController = new UIController(transform.Find("UI"), characterController, starController);
+		UIController = new UIController(transform.Find("UI"), characterController,pickups);
 
 		if (hardMode)
 		{

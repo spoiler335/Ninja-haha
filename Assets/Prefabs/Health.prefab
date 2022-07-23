@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4354783467207078780}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -993,11 +993,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6786074914950220840}
   - component: {fileID: 7089413897152519458}
-  - component: {fileID: 8372818601793279434}
   - component: {fileID: 3998444504231549079}
   m_Layer: 0
   m_Name: Health
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1030,18 +1029,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8372818601793279434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7668379363643325140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5581e77242109144fa2b9aab47cbd241, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &3998444504231549079
 Animator:
   serializedVersion: 3

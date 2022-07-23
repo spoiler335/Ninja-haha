@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
 	private int maxHealth = 100;
 	private int health;
 
+	
     void Start()
     {
 		characterMovement = GetComponent<CharacterMovement>();
@@ -68,4 +69,6 @@ public class CharacterController : MonoBehaviour
 	{
 		get { return health; }
 	}
+
+	
 }
