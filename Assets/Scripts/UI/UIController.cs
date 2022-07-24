@@ -17,8 +17,7 @@ public class UIController
 	private Image healthSlider;
 	private TextMeshProUGUI healthText;
 	private TextMeshProUGUI starText;
-	private Button inventoryButton;
-	private GameObject inventoryPanel;
+	
 
 	public UIController(Transform UIRoot, CharacterController characterController, Pickups pickups)
 	{
@@ -28,8 +27,6 @@ public class UIController
 		healthSlider = UIRoot.Find("HealthBar/BarFill").GetComponent<Image>();
 		healthText = UIRoot.Find("HealthBar/Text").GetComponent<TextMeshProUGUI>();
 		starText = UIRoot.Find("ScoreCount/Background/Text").GetComponent<TextMeshProUGUI>();
-		inventoryButton = UIRoot.Find("InventoryButton").GetComponent<Button>();
-		inventoryPanel = UIRoot.Find("InventoryPanel").GetComponent<GameObject>();
 	}
 
 	public void Update()

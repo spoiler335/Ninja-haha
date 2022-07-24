@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ignot
   - Jewel
   - Ham
   - Star
   - Health
   - Hazard
+  - Iron
   layers:
   - Default
   - TransparentFX
